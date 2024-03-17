@@ -41,13 +41,12 @@ int main()
 {
     // Print header
     cout << "Welcome to the rational number calculator!\n"
-         << "=========================================="
-         << endl;
+         << "==========================================\n"
+         << "Enter a fraction expression (e.g., '1/2 + 3' or '1 + 3/4'), or type 'exit' to quit:" << endl;
 
     // Program loop
     while (true)
     {
-        cout << "Enter a fraction expression (e.g., '1/2 + 3' or '1 + 3/4'), or type 'exit' to quit:" << endl;
         cout << "> ";
         // Get input from the user
         string input;
