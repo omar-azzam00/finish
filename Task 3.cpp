@@ -55,6 +55,11 @@ int main()
         // Tokenize the input
         vector<string> tokens = getTokens(input);
 
+        // if user entered nothing do nothing
+        if (tokens.size() == 0)
+        {
+            continue;
+        }
         // Check if the user wants to exit
         if (tokens.size() == 1 && tokens[0].compare("exit") == 0)
         {
