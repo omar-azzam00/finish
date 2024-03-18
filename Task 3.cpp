@@ -124,22 +124,21 @@ Fraction parseFraction(const string &token)
     stringstream ss(token);
     char slash = '/';
 
-    if (ss >> fraction.numerator)
+    ss >> fraction.numerator;
+
+    if (ss.peek() == slash)
     {
-        if (ss.peek() == slash)
+        ss.ignore();
+        ss >> fraction.denominator;
+        if (fraction.denominator == 0)
         {
-            ss.ignore();
-            ss >> fraction.denominator;
-            if (fraction.denominator == 0)
-            {
-                cerr << "Error! Denominator cannot be zero." << endl;
-                exit(1);
-            }
+            cerr << "Error! Denominator cannot be zero." << endl;
+            exit(1);
         }
-        else
-        {
-            fraction.denominator = 1; // Treat as integer or fraction with denominator 1
-        }
+    }
+    else
+    {
+        fraction.denominator = 1; // Treat as integer or fraction with denominator 1
     }
     return fraction;
 }
