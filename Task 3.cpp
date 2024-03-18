@@ -222,12 +222,12 @@ bool isValidFraction(const string &token)
         if (ss.peek() == slash)
         {
             ss.ignore();
-            if (ss >> denominator && denominator != 0)
+            if (ss >> denominator && denominator != 0 && ss.eof())
             {
                 return true;
             }
         }
-        else
+        else if (ss.eof())
         {
             return true; // No denominator specified, treated as integer or fraction with denominator 1
         }
