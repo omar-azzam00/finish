@@ -1,3 +1,12 @@
+// File: CS112_A2_T3_S9.10_20230267_20230031.cpp
+
+// Purpose: This is a simple fraction calculator.
+
+// Author 1: Omar Mostafa Saad    - 20230267 - S9.10 - I did the part related to tokenizing string and getting input.
+// Author 2: Ahmed Mohamed Ahmed  - 20230031 - S9.10 - he did the second part related to calculating the fractions.
+
+// Sorry, but our team is from two because our third team member is ill.
+
 #include <iostream>
 #include <array>
 #include <vector>
