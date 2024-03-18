@@ -139,11 +139,6 @@ Fraction parseFraction(const string &token)
     {
         ss.ignore();
         ss >> fraction.denominator;
-        if (fraction.denominator == 0)
-        {
-            cerr << "Error! Denominator cannot be zero." << endl;
-            exit(1);
-        }
     }
     else
     {
