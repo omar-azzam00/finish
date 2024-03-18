@@ -66,7 +66,16 @@ int main()
             cout << "Good bye!" << endl;
             break;
         }
-        // Check if the input is in the correct format
+        // if the user entered just one valid number. just simplify it.
+        if (tokens.size() == 1 && isValidFraction(tokens[0]))
+        {
+            Fraction fraction1 = parseFraction(tokens[0]);
+            fraction1 = simplifyFraction(fraction1);
+            printFraction(fraction1);
+            continue;
+        }
+
+        // Check if the input is in the correct format.
         if (tokens.size() != 3 || !isValidFraction(tokens[0]) || !isValidFraction(tokens[2]) ||
             (tokens[1] != "+" && tokens[1] != "-" && tokens[1] != "*" && tokens[1] != "/"))
         {
